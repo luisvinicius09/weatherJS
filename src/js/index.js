@@ -1,3 +1,5 @@
+// import convertTemperature from './utils';
+
 let searchField = undefined;
 let searchBtn = undefined;
 
@@ -30,21 +32,35 @@ const retrieveData = async (city) => {
   }
 }
 
+const convertTemperature = (t) => {
+  return Math.round((t - 273.15).toFixed(2));
+}
+
 retrieveData();
 
-
-
-const displayData = (arr) => {
+const filterData = (arr) => {
   let name = arr.name;
-  let country = arr.sys.country
-  let weather = arr.weather[0];
-  let { temp: main, temp_max: max,
-  temp_min: min, feels: feels_like, hum: humidity
+  let country = arr.sys.country;
+  let { description: desc, icon } = arr.weather[0];
+  let {
+    temp: main,
+    temp_max: max,
+    temp_min: min,
+    feels_like: feels,
+    humidity
   } = arr.main;
 
-  console.log(convertTemperature(main));
-
-  return { name, country, weather }
-}
+  return {
+    name,
+    country,
+    desc,
+    icon,
+    main,
+    max,
+    min,
+    feels,
+    humidity
+  };
+};
 
 
