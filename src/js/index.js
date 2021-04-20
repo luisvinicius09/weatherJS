@@ -1,4 +1,4 @@
-
+  
 const API_KEY = '1b0ad98e107c7466ad627bfc4b878e26';
 
 const retrieveData = async (city) => {
