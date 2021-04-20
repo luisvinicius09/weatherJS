@@ -1,0 +1,29 @@
+{
+  "name": "weatherJS",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">\r   <img src=\"https://img.shields.io/badge/Microverse-blueviolet\">\r </p>",
+  "main": "index.js",
+  "dependencies": {
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.34.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-cli": "^4.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisvinicius09/weatherJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luisvinicius09/weatherJS/issues"
+  },
+  "homepage": "https://github.com/luisvinicius09/weatherJS#readme"
+}
