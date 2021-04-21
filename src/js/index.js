@@ -8,7 +8,8 @@ let searchField,
   humidity,
   cityName,
   countryName,
-  gifElement = undefined;
+  gifElement,
+  errorElement = undefined;
 
 window.addEventListener('load', () => {
   searchField = document.querySelector('#search-input');
@@ -25,8 +26,13 @@ window.addEventListener('load', () => {
 
   gifElement = document.querySelector('#weather-gif');
 
+  errorElement = document.querySelector('#error-message');
+
   searchBtn.addEventListener('click', () => {
     retrieveData(searchField.value);
+
+    searchField.value = '';
+    errorElement.innerText = '';
   })
 
   retrieveData('New York');
@@ -48,6 +54,7 @@ const retrieveData = async (city) => {
     displayData(filterData(data));
     displayGifs();
   } catch (err) {
+    displayError(err)
     return err
   }
 }
@@ -94,4 +101,8 @@ const displayData = (obj) => {
 const displayGifs = () => {
   gifElement.src = 'https://media.giphy.com/media/3oFyD4xKncK6ptR7qg/giphy.gif';
   gifElement.alt = 'GIF'
+}
+
+const displayError = (msg) => {
+  errorElement.innerText = msg
 }
