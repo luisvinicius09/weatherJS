@@ -1,7 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  background-image: url('../img/bg-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
 .d-flex {
   display: flex;
 }
 
 .f-column {
   flex-direction: column;
+}
+
+@media(max-width: 700px) {
 }
