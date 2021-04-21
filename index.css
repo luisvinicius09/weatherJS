@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  background-image: url('../img/bg-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.f-column {
+  flex-direction: column;
+}
+
+.jf-center {
+  justify-content: center;
+}
+
+.titleWrapper {
+  position: relative;
+  top: 50px;
+  font-size: 25px;
+}
+
+.wrapper {
+  position: relative;
+  top: 170px;
+}
+
+.gif-card {
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 15px;
+  width: 460px;
+  height: 350px;
+}
+
+.gif-card img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.left-column {
+  margin-right: 7em;
+}
+
+.right-column {
+  margin-left: 4em;
+}
+
+.searchWrapper {
+  margin-bottom: 50px;
+}
+
+.searchBtn,
+.searchInput {
+  border: none;
+}
+
+.searchInput {
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 40px;
+  width: 100%;
+  margin-right: 10px;
+  padding: 3px 10px;
+  color: white;
+}
+
+.searchBtn {
+  background: none;
+}
+
+.searchBtn:active,
+.searchBtn:focus,
+.searchInput:active,
+.searchInput:focus {
+  outline: none;
+}
+
+.searchBtn:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 15px 40px 15px 35px;
+  width: 240px;
+}
+
+.mainWrapper {
+  margin-right: 30px;
+}
+
+.mainTemp {
+  font-size: 75px;
+}
+
+.tempItem {
+  margin-left: 10px;
+}
+
+.tempItem p {
+  text-align: center;
+}
+
+.error {
+  font-weight: bolder;
+  color: rgb(136, 5, 5);
+  text-align: center;
+  position: relative;
+  right: 20px;
+}
+
+@media (max-width: 900px) {
+  /* This is for mobile version */
+}
+
+@media (max-width: 1150px) {
+  .left-column {
+    margin-right: 1em;
+  }
+
+  .right-column {
+    margin-left: 1em;
+  }
+}
