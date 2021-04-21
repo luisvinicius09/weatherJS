@@ -12,7 +12,6 @@
 
 <p align="center">
   <img src="./new_screenshot.png">
-
 </p>
   
 ## Built With
@@ -47,6 +46,19 @@ To get a local copy up and running follow these simple example steps.
 ### Usage
 
 If you change anything in javascript files... you need to run `npm run build`.
+
+### Setup
+
+- Clone or download the repository.
+
+### Install
+
+- Run `npm install`.
+
+### Usage
+
+If you change anything in javascript files... you need to run `npm run build`.
+
 
 ## 🤝 Contributing
 
