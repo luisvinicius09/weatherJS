@@ -7,7 +7,8 @@ let searchField,
   maxTemp,
   feelsLike,
   humidity,
-  cityName = undefined;
+  cityName,
+  countryName = undefined;
 
 window.addEventListener('load', () => {
   searchField = document.querySelector('#search-input');
@@ -20,6 +21,7 @@ window.addEventListener('load', () => {
   humidity = document.querySelector('#humidity');
 
   cityName = document.querySelector('#city-name');
+  countryName = document.querySelector('#country-name');
 
   searchBtn.addEventListener('click', () => {
     retrieveData(searchField.value);
@@ -41,7 +43,6 @@ const retrieveData = async (city) => {
       throw 'Ops, something went wrong!'
     }
     const data = await res.json();
-    console.log(filterData(data))
     displayData(filterData(data));
   } catch (err) {
     return err
@@ -86,4 +87,5 @@ const displayData = (obj) => {
   feelsLike.innerText = convertTemperature(obj.feels);
   humidity.innerText = obj.humidity;
   cityName.innerText = obj.name;
+  countryName.innerText = obj.country;
 }

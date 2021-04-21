@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="assets/css/index.css" rel='stylesheet'>
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <title>WeatherJS</title>
 </head>
 <body>
-  <div>
-
+  <div class='container'>
     <div class='d-flex'>
       <div class='left-column'>
         <img src='https://media.giphy.com/media/jno88a5YoQy4nGvJWT/giphy.gif' alt='gif'>
@@ -25,26 +25,26 @@
           <button id='search-button'>Search</button>
         </div>
 
-        <div>
-          <h3 id='city-name'></h3>
+        <div class='d-flex'>
+          <p id='city-name'></p>,&nbsp;<span id='country-name'></span>
         </div>
         <div class='d-flex'>
           <div>
-            <span id='main-temp'></span>°
+            <p><span id='main-temp'></span>°</p>
             <img src='' alt=''>
           </div>
           <div class='d-flex f-column'>
             <div>
-              Min <span id='min-temp'></span>°
+              <strong>Min</strong> <p><span id='min-temp'></span>°</p>
             </div>
             <div>
-              Max <span id='max-temp'></span>°
+              <strong>Max</strong> <p><span id='max-temp'></span>°</p>
             </div>
             <div>
-              Real feel <span id='feels-like'></span>°
+              <strong>Real feel</strong> <p><span id='feels-like'></span>°</p>
             </div>
             <div>
-              Humidity <span id='humidity'></span>%
+              <strong>Humidity</strong> <p><span id='humidity'></span>%</p>
             </div>
           </div>
         </div>
