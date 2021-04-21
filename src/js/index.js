@@ -6,11 +6,20 @@ let searchField,
   minTemp,
   maxTemp,
   feelsLike,
-  humidity = undefined;
+  humidity,
+  cityName = undefined;
 
 window.addEventListener('load', () => {
   searchField = document.querySelector('#search-input');
   searchBtn = document.querySelector('#search-button');
+
+  mainTemp = document.querySelector('#main-temp');
+  minTemp = document.querySelector('#min-temp');
+  maxTemp = document.querySelector('#max-temp');
+  feelsLike = document.querySelector('#feels-like');
+  humidity = document.querySelector('#humidity');
+
+  cityName = document.querySelector('#city-name');
 
   searchBtn.addEventListener('click', () => {
     retrieveData(searchField.value);
@@ -21,8 +30,8 @@ window.addEventListener('load', () => {
 const API_KEY = '1b0ad98e107c7466ad627bfc4b878e26';
 
 const retrieveData = async (city) => {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=London&APPID=${API_KEY}`;
-  // const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`;
+  // const url = `https://api.openweathermap.org/data/2.5/weather?q=London&APPID=${API_KEY}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`;
   try {
     const res = await fetch(url, {
       method: 'POST',
@@ -33,6 +42,7 @@ const retrieveData = async (city) => {
     }
     const data = await res.json();
     console.log(filterData(data))
+    displayData(filterData(data));
   } catch (err) {
     return err
   }
@@ -42,7 +52,7 @@ const convertTemperature = (t) => {
   return Math.round((t - 273.15).toFixed(2));
 }
 
-retrieveData();
+retrieveData('New York');
 
 const filterData = (obj) => {
   let name = obj.name;
@@ -70,5 +80,10 @@ const filterData = (obj) => {
 };
 
 const displayData = (obj) => {
-  
+  mainTemp.innerText = convertTemperature(obj.main);
+  maxTemp.innerText = convertTemperature(obj.max);
+  minTemp.innerText = convertTemperature(obj.min);
+  feelsLike.innerText = convertTemperature(obj.feels);
+  humidity.innerText = obj.humidity;
+  cityName.innerText = obj.name;
 }
