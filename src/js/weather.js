@@ -1,15 +1,5 @@
 import { convertTemperature } from './utils';
 
-let mainTemp = undefined;
-let minTemp = undefined;
-let maxTemp = undefined;
-let feelsLike = undefined;
-let humidity = undefined;
-let cityName = undefined;
-let countryName = undefined;
-let gifElement = undefined;
-let errorElement = undefined;
-
 const mainTemp = document.querySelector('#main-temp');
 const minTemp = document.querySelector('#min-temp');
 const maxTemp = document.querySelector('#max-temp');
