@@ -59,6 +59,7 @@ If you change anything in javascript files... you need to run `npm run build`.
 
 If you change anything in javascript files... you need to run `npm run build`.
 
+Otherwise just open `index.html` in the browser.
 
 ## 🤝 Contributing
 
