@@ -1,5 +1,5 @@
 const convertTemperature = (t) => {
-  return (t - 273.15).toFixed(2);
+  return (t - 273.15).toFixed(0);
 }
 
 export {
