@@ -37,11 +37,11 @@
 
 .gif-card {
   background: rgba(0, 0, 0, 0.3);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 8.0px );
-  -webkit-backdrop-filter: blur( 8.0px );
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 15px;
   width: 460px;
   height: 350px;
@@ -72,11 +72,11 @@
 
 .searchInput {
   background: rgba(0, 0, 0, 0.3);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 8.0px );
-  -webkit-backdrop-filter: blur( 8.0px );
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: 6px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border: 1px solid rgba(255, 255, 255, 0.18);
   height: 40px;
   width: 100%;
   margin-right: 10px;
@@ -102,17 +102,17 @@
 
 .weather-card {
   background: rgba( 255, 255, 255, 0.30 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 8.0px );
-  -webkit-backdrop-filter: blur( 8.0px );
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 15px 40px 15px 35px;
   width: 240px;
 }
 
 .mainWrapper {
-  margin: 0px 30px 0px 0px;
+  margin: 0 30 0 0;
 }
 
 .mainTemp {
@@ -123,7 +123,7 @@
   margin-left: 10px;
 }
 
-.tempItem p{
+.tempItem p {
   text-align: center;
 }
 
@@ -135,15 +135,15 @@
   right: 20px;
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
   /* This is for mobile version */
 }
 
-@media(max-width: 1150px) {
+@media (max-width: 1150px) {
   .left-column {
     margin-right: 1em;
   }
-  
+
   .right-column {
     margin-left: 1em;
   }
