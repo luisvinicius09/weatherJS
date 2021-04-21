@@ -11,7 +11,7 @@
 </h4>
 
 <p align="center">
-  <img src="./app_screenshot.png">
+  <img src="./new_screenshot.png">
 
 </p>
   
