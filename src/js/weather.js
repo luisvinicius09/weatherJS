@@ -13,7 +13,7 @@ const gifElement = document.querySelector('#weather-gif');
 
 const errorElement = document.querySelector('#error-message');
 
-const API_KEY = 'PUT THE API KEY HERE';
+const API_KEY = '1b0ad98e107c7466ad627bfc4b878e26';
 
 const filterData = (obj) => {
   const { name } = obj;
@@ -79,6 +79,4 @@ const retrieveData = async (city) => {
   }
 };
 
-export default {
-  retrieveData,
-};
+export default retrieveData;
