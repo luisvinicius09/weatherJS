@@ -22,7 +22,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live demo](https://luisvinicius09.github.io/weatherJS/)
 
 
 ## Getting Started
