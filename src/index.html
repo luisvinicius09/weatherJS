@@ -24,27 +24,34 @@
           <input id='search-input'>
           <button id='search-button'>Search</button>
         </div>
-
-        <div class='d-flex'>
-          <p id='city-name'></p>,&nbsp;<span id='country-name'></span>
-        </div>
-        <div class='d-flex'>
-          <div>
-            <p><span id='main-temp'></span>°</p>
-            <img src='' alt=''>
+        <div class='weather-card'>
+          <div class='d-flex'>
+            <p id='city-name'></p>,&nbsp;<span id='country-name'></span>
           </div>
-          <div class='d-flex f-column'>
-            <div>
-              <strong>Min</strong> <p><span id='min-temp'></span>°</p>
+          <div class='d-flex'>
+            <div class='mainWrapper'>
+              <p class='mainTemp'><span id='main-temp'></span>°</p>
+              <img src='' alt=''>
             </div>
-            <div>
-              <strong>Max</strong> <p><span id='max-temp'></span>°</p>
-            </div>
-            <div>
-              <strong>Real feel</strong> <p><span id='feels-like'></span>°</p>
-            </div>
-            <div>
-              <strong>Humidity</strong> <p><span id='humidity'></span>%</p>
+
+            <div class='d-flex'>
+              <div>
+                <div>
+                  <strong>Min</strong> <p><span id='min-temp'></span>°</p>
+                </div>
+                <div>
+                  <strong>Max</strong> <p><span id='max-temp'></span>°</p>
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <strong>Real feel</strong> <p><span id='feels-like'></span>°</p>
+                </div>
+                <div>
+                  <strong>Humidity</strong> <p><span id='humidity'></span>%</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

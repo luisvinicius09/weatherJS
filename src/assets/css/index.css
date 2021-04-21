@@ -20,5 +20,23 @@
   flex-direction: column;
 }
 
+.weather-card {
+  background: rgba( 255, 255, 255, 0.30 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 8.0px );
+  -webkit-backdrop-filter: blur( 8.0px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding: 15px 40px 0px 35px;
+}
+
+.mainWrapper {
+  margin: 0px 30px 0px 0px;
+}
+
+.mainTemp {
+  font-size: 75px;
+}
+
 @media(max-width: 700px) {
 }
