@@ -1,7 +1,12 @@
 // import convertTemperature from './utils';
 
-let searchField = undefined;
-let searchBtn = undefined;
+let searchField,
+  searchBtn,
+  mainTemp,
+  minTemp,
+  maxTemp,
+  feelsLike,
+  humidity = undefined;
 
 window.addEventListener('load', () => {
   searchField = document.querySelector('#search-input');
@@ -13,22 +18,23 @@ window.addEventListener('load', () => {
 
 })
 
-
 const API_KEY = '1b0ad98e107c7466ad627bfc4b878e26';
 
 const retrieveData = async (city) => {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=London&APPID=${API_KEY}`;
   // const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`;
-
   try {
     const res = await fetch(url, {
       method: 'POST',
       mode: 'cors',
     });
+    if(res.status !== 200) {
+      throw 'Ops, something went wrong!'
+    }
     const data = await res.json();
-    console.log(displayData(data))
+    console.log(filterData(data))
   } catch (err) {
-    console.log(err);
+    return err
   }
 }
 
@@ -38,17 +44,17 @@ const convertTemperature = (t) => {
 
 retrieveData();
 
-const filterData = (arr) => {
-  let name = arr.name;
-  let country = arr.sys.country;
-  let { description: desc, icon } = arr.weather[0];
+const filterData = (obj) => {
+  let name = obj.name;
+  let country = obj.sys.country;
+  let { description: desc, icon } = obj.weather[0];
   let {
     temp: main,
     temp_max: max,
     temp_min: min,
     feels_like: feels,
     humidity
-  } = arr.main;
+  } = obj.main;
 
   return {
     name,
@@ -63,4 +69,6 @@ const filterData = (arr) => {
   };
 };
 
-
+const displayData = (obj) => {
+  
+}
