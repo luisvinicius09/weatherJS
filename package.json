@@ -15,7 +15,8 @@
   },
   "scripts": {
     "build": "npx webpack",
-    "watch": "npx webpack --watch"
+    "watch": "npx webpack --watch",
+    "start": "webpack serve"
   },
   "repository": {
     "type": "git",
