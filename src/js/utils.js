@@ -1,7 +1,5 @@
-const convertTemperature = (t) => {
-  return (t - 273.15).toFixed(0);
-}
+const convertTemperature = (t) => (t - 273.15).toFixed(0);
 
-export {
-  convertTemperature
-}
+export default{
+  convertTemperature,
+};

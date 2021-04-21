@@ -1,14 +1,14 @@
 import { convertTemperature } from './utils';
 
-let mainTemp,
-  minTemp,
-  maxTemp,
-  feelsLike,
-  humidity,
-  cityName,
-  countryName,
-  gifElement,
-  errorElement = undefined;
+let mainTemp = undefined;
+let minTemp = undefined;
+let maxTemp = undefined;
+let feelsLike = undefined;
+let humidity = undefined;
+let cityName = undefined;
+let countryName = undefined;
+let gifElement = undefined;
+let errorElement = undefined;
 
 mainTemp = document.querySelector('#main-temp');
 minTemp = document.querySelector('#min-temp');
@@ -23,27 +23,7 @@ gifElement = document.querySelector('#weather-gif');
 
 errorElement = document.querySelector('#error-message');
 
-
 const API_KEY = 'PUT THE API KEY HERE';
-
-const retrieveData = async (city) => {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`;
-  try {
-    const res = await fetch(url, {
-      method: 'POST',
-      mode: 'cors',
-    });
-    if(res.status !== 200) {
-      throw 'Ops, something went wrong!'
-    }
-    const data = await res.json();
-    displayData(filterData(data));
-    displayGifs();
-  } catch (err) {
-    displayError(err)
-    return err
-  }
-};
 
 const filterData = (obj) => {
   let name = obj.name;
@@ -92,3 +72,23 @@ const displayError = (msg) => {
 export {
   retrieveData
 };
+
+const retrieveData = async (city) => {
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`;
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      mode: 'cors',
+    });
+    if(res.status !== 200) {
+      throw 'Ops, something went wrong!'
+    }
+    const data = await res.json();
+    displayData(filterData(data));
+    displayGifs();
+  } catch (err) {
+    displayError(err)
+    return err
+  }
+};
+
