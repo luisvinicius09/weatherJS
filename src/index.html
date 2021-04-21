@@ -8,6 +8,7 @@
   <link href="assets/css/index.css" rel='stylesheet'>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>WeatherJS</title>
 </head>
 <body>
@@ -19,11 +20,16 @@
   
       <div class='right-column'>
         <h1>WeatherJS</h1>
-        <h2>Search</h2>
-        <div class='d-flex f-column'>
-          <input id='search-input'>
-          <button id='search-button'>Search</button>
+        <div class='searchWrapper'>
+          <h2>Search</h2>
+          <div class='d-flex'>
+            <input id='search-input' class='searchInput'>
+            <button id='search-button' class='searchBtn'>
+              <span class="material-icons">search</span>
+            </button>
+          </div>
         </div>
+
         <div class='weather-card'>
           <div class='d-flex'>
             <p id='city-name'></p>,&nbsp;<span id='country-name'></span>
@@ -60,6 +66,5 @@
   </div>
 
   <script src='./js/index.js'></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
 </body>
 </html>

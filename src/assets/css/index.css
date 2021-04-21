@@ -55,6 +55,38 @@
   margin-left: 4em;
 }
 
+.searchBtn,
+.searchInput {
+  border: none;
+}
+
+.searchInput {
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 8.0px );
+  -webkit-backdrop-filter: blur( 8.0px );
+  border-radius: 6px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  height: 40px;
+  padding: 3px 10px;
+  color: white;
+}
+
+.searchBtn {
+  background: none;
+}
+
+.searchBtn:active,
+.searchBtn:focus,
+.searchInput:active,
+.searchInput:focus {
+  outline: none;
+}
+
+.searchBtn:hover {
+  cursor: pointer;
+}
+
 .weather-card {
   background: rgba( 255, 255, 255, 0.30 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
