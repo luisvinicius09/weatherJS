@@ -12,7 +12,6 @@
 
 <p align="center">
   <img src="./new_screenshot.png">
-
 </p>
   
 ## Built With
@@ -48,21 +47,19 @@ To get a local copy up and running follow these simple example steps.
 
 If you change anything in javascript files... you need to run `npm run build`.
 
+### Setup
 
-<h2 align="center">
-  Author
-</h2>
+- Clone or download the repository.
 
-<p align="center">
-  <strong>Luis Vinicius M. S. 👤</strong>  
-</p>
+### Install
 
-<p align="center">
-  GitHub: <a href="https://github.com/githubhandle">@luisvinicius09</a>
-</p>
-<p align="center">
-  LinkedIn: <a href="https://linkedin.com/luis-vinicius">LinkedIn</a>
-</p>
+- Run `npm install`.
+
+### Usage
+
+If you change anything in javascript files... you need to run `npm run build`.
+
+Otherwise just open `index.html` in the browser.
 
 ## 🤝 Contributing
 
@@ -83,3 +80,19 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](lic.url) licensed.
+
+<h2 align="center">
+  Author
+</h2>
+
+<p align="center">
+  <strong>Luis Vinicius M. S. 👤</strong>  
+</p>
+
+<p align="center">
+  GitHub: <a href="https://github.com/githubhandle">@luisvinicius09</a>
+</p>
+<p align="center">
+  LinkedIn: <a href="https://linkedin.com/luis-vinicius">LinkedIn</a>
+</p>
+
