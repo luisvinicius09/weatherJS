@@ -1,4 +1,4 @@
-import { convertTemperature } from './utils';
+import convertTemperature from './utils';
 
 const mainTemp = document.querySelector('#main-temp');
 const minTemp = document.querySelector('#min-temp');
@@ -67,18 +67,18 @@ const retrieveData = async (city) => {
       mode: 'cors',
     });
     if (res.status !== 200) {
-      throw 'Ops, something went wrong!';
+      return 'Ops, something went wrong!';
     }
     const data = await res.json();
-    return data;
     displayData(filterData(data));
     displayGifs();
   } catch (err) {
     displayError(err);
     return err;
   }
+  return data;
 };
 
-export {
+export default {
   retrieveData,
 };
