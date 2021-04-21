@@ -10,31 +10,31 @@ let countryName = undefined;
 let gifElement = undefined;
 let errorElement = undefined;
 
-mainTemp = document.querySelector('#main-temp');
-minTemp = document.querySelector('#min-temp');
-maxTemp = document.querySelector('#max-temp');
-feelsLike = document.querySelector('#feels-like');
-humidity = document.querySelector('#humidity');
+const mainTemp = document.querySelector('#main-temp');
+const minTemp = document.querySelector('#min-temp');
+const maxTemp = document.querySelector('#max-temp');
+const feelsLike = document.querySelector('#feels-like');
+const humidity = document.querySelector('#humidity');
 
-cityName = document.querySelector('#city-name');
-countryName = document.querySelector('#country-name');
+const cityName = document.querySelector('#city-name');
+const countryName = document.querySelector('#country-name');
 
-gifElement = document.querySelector('#weather-gif');
+const gifElement = document.querySelector('#weather-gif');
 
-errorElement = document.querySelector('#error-message');
+const errorElement = document.querySelector('#error-message');
 
 const API_KEY = 'PUT THE API KEY HERE';
 
 const filterData = (obj) => {
-  let name = obj.name;
-  let country = obj.sys.country;
-  let { description: desc, icon } = obj.weather[0];
-  let {
+  const { name } = obj;
+  const { country } = obj.sys;
+  const { description: desc, icon } = obj.weather[0];
+  const {
     temp: main,
     temp_max: max,
     temp_min: min,
     feels_like: feels,
-    humidity
+    humidity,
   } = obj.main;
 
   return {
@@ -46,7 +46,7 @@ const filterData = (obj) => {
     max,
     min,
     feels,
-    humidity
+    humidity,
   };
 };
 
@@ -62,15 +62,11 @@ const displayData = (obj) => {
 
 const displayGifs = () => {
   gifElement.src = 'https://media.giphy.com/media/3oFyD4xKncK6ptR7qg/giphy.gif';
-  gifElement.alt = 'GIF'
+  gifElement.alt = 'GIF';
 };
 
 const displayError = (msg) => {
-  errorElement.innerText = msg
-};
-
-export {
-  retrieveData
+  errorElement.innerText = msg;
 };
 
 const retrieveData = async (city) => {
@@ -80,15 +76,19 @@ const retrieveData = async (city) => {
       method: 'POST',
       mode: 'cors',
     });
-    if(res.status !== 200) {
-      throw 'Ops, something went wrong!'
+    if (res.status !== 200) {
+      throw 'Ops, something went wrong!';
     }
     const data = await res.json();
+    return data;
     displayData(filterData(data));
     displayGifs();
   } catch (err) {
-    displayError(err)
-    return err
+    displayError(err);
+    return err;
   }
 };
 
+export {
+  retrieveData,
+};
