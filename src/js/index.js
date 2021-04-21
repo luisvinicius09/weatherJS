@@ -1,8 +1,8 @@
 import { retrieveData } from './weather';
 
-let searchField,
-  searchBtn,
-  errorElement = undefined;
+let searchField = undefined;
+let searchBtn = undefined;
+let errorElement = undefined;
 
 window.addEventListener('load', () => {
   searchField = document.querySelector('#search-input');
@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
 
     searchField.value = '';
     errorElement.innerText = '';
-  })
+  });
 
   retrieveData('New York');
-})
+});
