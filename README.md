@@ -45,21 +45,19 @@ To get a local copy up and running follow these simple example steps.
 
 ### Usage
 
-If you change anything in javascript files... you need to run `npm run build`.
+You will need an API KEY from [Open Weather](https://openweathermap.org).
 
-### Setup
+You'll need to create an account to get your own key and insert it on the the const `API_KEY` in the `weather.js` file.
 
-- Clone or download the repository.
+Accesing [this](https://home.openweathermap.org/api_keys) website you are able to generate the key(you'll receive it on your email).
 
-### Install
+You have to wait a few moments to get it activated until you start using it.
 
-- Run `npm install`.
+#
 
-### Usage
+If you change anything in javascript files... you need to run `npm run build
 
-If you change anything in javascript files... you need to run `npm run build`.
-
-Otherwise just open `index.html` in the browser.
+Otherwise just open `index.html` in the browser
 
 ## 🤝 Contributing
 
