@@ -1,4 +1,4 @@
-import { retrieveData } from './weather';
+import retrieveData from './weather';
 
 window.addEventListener('load', () => {
   const searchField = document.querySelector('#search-input');

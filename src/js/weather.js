@@ -72,11 +72,11 @@ const retrieveData = async (city) => {
     const data = await res.json();
     displayData(filterData(data));
     displayGifs();
+    return data;
   } catch (err) {
     displayError(err);
     return err;
   }
-  return data;
 };
 
 export default {
