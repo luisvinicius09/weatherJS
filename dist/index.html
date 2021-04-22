@@ -69,5 +69,14 @@
   </div>
 
   <script src='./main.js'></script>
+  <script>
+    function initAutoComplete() {
+      const input = document.querySelector('#search-input');
+      const complete = new google.maps.places.Autocomplete(input, {types: ['(cities)']});
+    }
+    </script>
+    <script async
+      src="https://maps.googleapis.com/maps/api/js?key=API_KEY&libraries=places&callback=initAutoComplete">
+    </script>
 </body>
 </html>

@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
   const errorElement = document.querySelector('#error-message');
 
   searchBtn.addEventListener('click', () => {
-    retrieveData(searchField.value);
+    retrieveData(searchField.value.match(/^[^,]*/));
 
     searchField.value = '';
     errorElement.innerText = '';
