@@ -13,7 +13,7 @@ const gifElement = document.querySelector('#weather-gif');
 
 const errorElement = document.querySelector('#error-message');
 
-const API_KEY = 'PUT THE API KEY HERE';
+const API_KEY = 'API_KEY';
 
 const filterData = (obj) => {
   const { name } = obj;
