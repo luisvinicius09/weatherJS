@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/animations.js":
+/*!******************************!*\
+  !*** ./src/js/animations.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst animate = () => {\r\n  const title = document.querySelector('.titleWrapper');\r\n  gsap.from(title, { x: -320 });\r\n  gsap.to(title, { duration: 4, x: 0 })\r\n\r\n  const gif = document.querySelector('.gif-card');\r\n  gsap.from(gif, { x: -220 });\r\n  gsap.to(gif, { duration: 2.7, x: 0 });\r\n\r\n  const search = document.querySelector('.searchWrapper');\r\n  gsap.from(search, { x: -180 });\r\n  gsap.to(search, { duration: 1, x: 0 })\r\n\r\n  const weatherCard = document.querySelector('.weather-card');\r\n  gsap.from(weatherCard, { x: -200 });\r\n  gsap.to(weatherCard, { duration: 2, x: 0 });\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (animate);\n\n//# sourceURL=webpack://weatherJS/./src/js/animations.js?");
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _weather__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./weather */ \"./src/js/weather.js\");\n\r\n\r\nwindow.addEventListener('load', () => {\r\n  const searchField = document.querySelector('#search-input');\r\n  const searchBtn = document.querySelector('#search-button');\r\n\r\n  const errorElement = document.querySelector('#error-message');\r\n\r\n  searchBtn.addEventListener('click', () => {\r\n    (0,_weather__WEBPACK_IMPORTED_MODULE_0__.default)(searchField.value.match(/^[^,]*/));\r\n\r\n    searchField.value = '';\r\n    errorElement.innerText = '';\r\n  });\r\n\r\n  (0,_weather__WEBPACK_IMPORTED_MODULE_0__.default)('New York');\r\n});\r\n\n\n//# sourceURL=webpack://weatherJS/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _weather__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./weather */ \"./src/js/weather.js\");\n/* harmony import */ var _animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./animations */ \"./src/js/animations.js\");\n\r\n\r\n\r\nwindow.addEventListener('load', () => {\r\n  const searchField = document.querySelector('#search-input');\r\n  const searchBtn = document.querySelector('#search-button');\r\n\r\n  const errorElement = document.querySelector('#error-message');\r\n\r\n  searchBtn.addEventListener('click', () => {\r\n    (0,_weather__WEBPACK_IMPORTED_MODULE_0__.default)(searchField.value.match(/^[^,]*/));\r\n\r\n    searchField.value = '';\r\n    errorElement.innerText = '';\r\n  });\r\n\r\n  (0,_weather__WEBPACK_IMPORTED_MODULE_0__.default)('New York');\r\n  (0,_animations__WEBPACK_IMPORTED_MODULE_1__.default)();\r\n});\r\n\n\n//# sourceURL=webpack://weatherJS/./src/js/index.js?");
 
 /***/ }),
 
