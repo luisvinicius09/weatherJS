@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="../src/assets/css/index.css" rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>WeatherJS</title>
+</head>
+<body>
+  <div class='container'>
+    <div class='titleWrapper d-flex jf-center'>
+      <h1>WeatherJS</h1>
+    </div>
+
+    <div class='d-flex jf-center wrapper'>
+      <div class='left-column gif-card'>
+        <img id='weather-gif'>
+      </div>
+  
+      <div class='right-column'>
+        <div class='searchWrapper'>
+          <h2>Search</h2>
+          <div class='d-flex'>
+            <input id='search-input' class='searchInput' placeholder="Type the city name">
+            <button id='search-button' class='searchBtn'>
+              <span class="material-icons">search</span>
+            </button>
+          </div>
+          <div id='error-message' class='error'></div>
+        </div>
+
+        <div class='weather-card'>
+          <div class='d-flex'>
+            <p id='city-name'></p>,&nbsp;<span id='country-name'></span>
+          </div>
+          <div class='d-flex'>
+            <div class='mainWrapper'>
+              <p class='mainTemp'><span id='main-temp'></span>°</p>
+            </div>
+
+            <div class='d-flex'>
+              <div>
+                <div class='tempItem'>
+                  <strong>Min</strong> <p><span id='min-temp'></span>°</p>
+                </div>
+                <div class='tempItem'>
+                  <strong>Max</strong> <p><span id='max-temp'></span>°</p>
+                </div>
+              </div>
+
+              <div>
+                <div class='tempItem'>
+                  <strong>Real feel</strong> <p><span id='feels-like'></span>°</p>
+                </div>
+                <div class='tempItem'>
+                  <strong>Humidity</strong> <p><span id='humidity'></span>%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src='./main.js'></script>
+  <script>
+    function initAutoComplete() {
+      const input = document.querySelector('#search-input');
+      const complete = new google.maps.places.Autocomplete(input, {types: ['(cities)']});
+    }
+  </script>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=API_KEY_HERE&libraries=places&callback=initAutoComplete">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+</body>
+</html>

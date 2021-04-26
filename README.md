@@ -11,12 +11,9 @@
 </h4>
 
 <p align="center">
-  <img src="./app_screenshot.png">
-
+  <img src="./new_screenshot.png">
 </p>
   
-Additional description about the project and its features.
-
 ## Built With
 
 - HTML
@@ -25,7 +22,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live demo](https://luisvinicius09.github.io/weatherJS/)
 
 
 ## Getting Started
@@ -48,23 +45,19 @@ To get a local copy up and running follow these simple example steps.
 
 ### Usage
 
-If you change anything in javascript files... you need to run `npm run build`.
+You will need an API KEY from [Open Weather](https://openweathermap.org).
 
+You'll need to create an account to get your own key and insert it on the the const `API_KEY` in the `weather.js` file.
 
-<h2 align="center">
-  Author
-</h2>
+Accesing [this](https://home.openweathermap.org/api_keys) website you are able to generate the key(you'll receive it on your email).
 
-<p align="center">
-  <strong>Luis Vinicius M. S. 👤</strong>  
-</p>
+You have to wait a few moments to get it activated until you start using it.
 
-<p align="center">
-  GitHub: <a href="https://github.com/githubhandle">@luisvinicius09</a>
-</p>
-<p align="center">
-  LinkedIn: <a href="https://linkedin.com/luis-vinicius">LinkedIn</a>
-</p>
+#
+
+If you change anything in javascript files... you need to run `npm run build
+
+Otherwise just open `index.html` in the browser
 
 ## 🤝 Contributing
 
@@ -85,3 +78,19 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](lic.url) licensed.
+
+<h2 align="center">
+  Author
+</h2>
+
+<p align="center">
+  <strong>Luis Vinicius M. S. 👤</strong>  
+</p>
+
+<p align="center">
+  GitHub: <a href="https://github.com/githubhandle">@luisvinicius09</a>
+</p>
+<p align="center">
+  LinkedIn: <a href="https://linkedin.com/luis-vinicius">LinkedIn</a>
+</p>
+
